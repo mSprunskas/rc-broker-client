@@ -3,6 +3,18 @@
     "type": "project",
     "license": "MIT",
     "minimum-stability": "stable",
+    "autoload": {
+        "psr-0": {
+            "": [
+                "src/"
+            ]
+        }
+    },
+    "config": {
+        "discard-changes": true,
+        "bin-dir": "bin",
+        "sort-packages": true
+    },
     "require": {
         "php": "^7.4"
     }

@@ -1,5 +1,5 @@
 # RC Broker Client
-Script for communication with https://ws.registrucentras.lt/broker/info.php
+Script for communication with [https://ws.registrucentras.lt/broker/](https://ws.registrucentras.lt/broker/)
 
 ## Usage
 - Modify `index.php` to your needs

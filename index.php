@@ -34,13 +34,9 @@ if (!openssl_sign($parameterValues, $signature, $key)) {
     throw new Exception('Failed to create payload signature');
 }
 
-//$parameters['Signature'] = $signature;
+$parameters['Signature'] = $signature;
 
 print_r($parameters);
 echo "\r\n";
 echo 'https://ws.registrucentras.lt/broker/index.rest.php?' . http_build_query($parameters);
 echo "\r\n";
-
-
-
-

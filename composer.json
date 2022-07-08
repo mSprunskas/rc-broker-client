@@ -1,0 +1,9 @@
+{
+    "name": "marius/rc-broker-client",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.4"
+    }
+}

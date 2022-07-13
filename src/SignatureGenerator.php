@@ -28,7 +28,7 @@ class SignatureGenerator
         }
 
         if (!openssl_sign($parameterValues, $signature, $key)) {
-            throw new Exception('Failed to create payload signature');
+            throw new Exception('Failed to sign data');
         }
 
         return str_replace(["\r", "\n"], '', base64_encode($signature));
@@ -38,8 +38,12 @@ class SignatureGenerator
     {
         $orderedParameterValues = [];
 
-        foreach (self::SIGNATURE_PARAMETERS as $item) {
-            $orderedParameterValues[] = $parameters[$item];
+        foreach (self::SIGNATURE_PARAMETERS as $key) {
+            if (!isset($parameters[$key])) {
+                throw new Exception(sprintf('Key %s is not available in provided dataset', $key));
+            }
+
+            $orderedParameterValues[] = $parameters[$key];
         }
 
         return implode('', $orderedParameterValues);

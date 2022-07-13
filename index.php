@@ -6,7 +6,7 @@ require 'vendor/autoload.php';
 
 $parameters = [
     'ActionType' => 437,
-    'CallerCode' => 'Acme', // TODO: this one should be registered in remote system
+    'CallerCode' => 'Acme',
     'Parameters' => '<asmuo><tipas>JURIDINIS_ASMUO</tipas><kodas>000000000</kodas></asmuo>',
     'Time' => (new DateTime())->format('Y-m-d H:i:s'),
 ];
